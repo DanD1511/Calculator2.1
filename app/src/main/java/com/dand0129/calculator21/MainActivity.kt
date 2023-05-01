@@ -13,7 +13,7 @@ class MainActivity : ComponentActivity() {
         val viewModel: MainActivityViewModel by viewModels()
         setContent {
             Calculator21Theme {
-                Main(viewModel)
+                Calculator(viewModel)
             }
         }
     }

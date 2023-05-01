@@ -65,3 +65,13 @@ fun ResultButton(
     }
 }
 
+@Composable
+fun ClearButton(
+    viewModel: MainActivityViewModel,
+    onButtonClicked: () -> Unit
+){
+    Button(onClick = {onButtonClicked()}) {
+        Text(text = "CLR")
+    }
+}
+

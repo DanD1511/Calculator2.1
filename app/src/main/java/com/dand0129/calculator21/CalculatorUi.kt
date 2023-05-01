@@ -16,7 +16,7 @@ import androidx.compose.ui.unit.dp
 class CalculatorUi: ComponentActivity() {
 }
 @Composable
-fun Main(
+fun Calculator(
     viewModel: MainActivityViewModel
 ){
     Column {
