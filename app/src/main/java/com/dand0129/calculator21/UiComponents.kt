@@ -11,6 +11,7 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import com.dand0129.calculator20.ClearButton
 import com.dand0129.calculator20.DeleteButton
 import com.dand0129.calculator20.NumericButtons
 import com.dand0129.calculator20.OperationButtons
@@ -126,6 +127,11 @@ fun Keyboard(
                 viewModel = MainActivityViewModel(),
                 onButtonClicked = {viewModel.result()}
             )
+            ClearButton(
+                viewModel = MainActivityViewModel(),
+                onButtonClicked = {viewModel.clearDisplay()}
+            )
+
         }
     }
 }
