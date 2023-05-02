@@ -1,17 +1,16 @@
 package com.dand0129.calculator21
 
-import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
 class MainActivityViewModel : ViewModel() {
 
-    private val _number1 = MutableLiveData<String>("")
-    private val _number2 = MutableLiveData<String>("")
+    private val _number1 = MutableLiveData("")
+    private val _number2 = MutableLiveData("")
     private val _currentOperation = MutableLiveData("")
-    private val _textToDisplay = MutableLiveData<String>("")
-    private val _ans = MutableLiveData<String>("")
-    private val _answer = MutableLiveData<String>("")
+    private val _textToDisplay = MutableLiveData("")
+    private val _ans = MutableLiveData("")
+    private val _answer = MutableLiveData("")
 
     fun getNumber(number: String) {
         _textToDisplay.value += number
@@ -49,7 +48,7 @@ class MainActivityViewModel : ViewModel() {
         }
     }
 
-    fun calculateResult(number1: Double, number2: Double, operation: String): Double {
+    private fun calculateResult(number1: Double, number2: Double, operation: String): Double {
         var currentResult = 0.0
         when (operation) {
             "+" -> currentResult = number1 + number2
@@ -69,6 +68,7 @@ class MainActivityViewModel : ViewModel() {
                 _number1.value!!.toDouble(),
                 _currentOperation.value!!
             ).toString()
+            _textToDisplay.value = _ans.value
             _answer.value = _ans.value
             _number1.value = _ans.value
             _number2.value = ""
