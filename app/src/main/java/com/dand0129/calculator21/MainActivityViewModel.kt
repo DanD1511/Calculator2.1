@@ -72,6 +72,7 @@ class MainActivityViewModel : ViewModel() {
             _answer.value = _ans.value
             _number1.value = _ans.value
             _number2.value = ""
+            _ans.value = ""
         }
     }
 

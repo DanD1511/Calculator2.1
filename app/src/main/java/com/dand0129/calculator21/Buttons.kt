@@ -1,4 +1,4 @@
-package com.dand0129.calculator20
+package com.dand0129.calculator21
 
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Box
@@ -11,25 +11,22 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
-import androidx.compose.ui.Alignment.Companion.CenterVertically
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.dand0129.calculator21.MainActivityViewModel
 
 // Numeric buttons
 
 @Composable
 fun NumericButtons(
     number: String,
-    viewModel: MainActivityViewModel,
     onButtonClicked: (String) -> Unit,
 ) {
     val number1 = remember { mutableStateOf("") }
-    Box() {
+    Box {
         Button(
             onClick = {
                 number1.value = number
@@ -63,7 +60,6 @@ fun NumericButtons(
 
 @Composable
 fun DeleteButton(
-    viewModel: MainActivityViewModel,
     onButtonClicked: () -> Unit
 ) {
     Button(
@@ -93,7 +89,6 @@ fun DeleteButton(
 
 @Composable
 fun OperationButtons(
-    viewModel: MainActivityViewModel,
     onButtonClicked: () -> Unit,
     operation: String
 ) {
@@ -124,7 +119,6 @@ fun OperationButtons(
 
 @Composable
 fun ResultButton(
-    viewModel: MainActivityViewModel,
     onButtonClicked: () -> Unit
 ) {
     Button(
@@ -152,7 +146,6 @@ fun ResultButton(
 
 @Composable
 fun ClearButton(
-    viewModel: MainActivityViewModel,
     onButtonClicked: () -> Unit
 ) {
     Button(
